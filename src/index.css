@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-poppins: "Poppins", sans-serif;
+  --font-noto-kr: "Noto Sans KR", sans-serif;
+}
+
+body {
+  font-family: var(--font-poppins);
+  @apply bg-gradient-to-b from-pink-50 to-purple-50 min-h-screen;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+.font-noto-kr {
+  font-family: var(--font-noto-kr);
+}
+
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(240, 143, 220, 0.2);
+}
+
+.emoji-icon {
+  display: inline-block;
+  font-size: 1.2em;
+  line-height: 1;
+  vertical-align: middle;
+  margin-right: 0.3em;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500;
+}
+
+.banner-rotation {
+  animation: banner-slide 20s linear infinite;
+}
+
+@keyframes banner-slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Theme styles */
+.light {
+  --background: #ffffff;
+  --foreground: #0f0f0f;
+  --card: #ffffff;
+  --card-foreground: #0f0f0f;
+  --border: #e5e5e5;
+  --primary: #ec4899;
+  --primary-foreground: #ffffff;
+  --secondary: #f3f4f6;
+  --secondary-foreground: #1f2937;
+  --muted: #f3f4f6;
+  --muted-foreground: #6b7280;
+  --accent: #8b5cf6;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --ring: #ec4899;
+  --radius: 1rem;
+}
+
+.dark {
+  --background: #0f0f0f;
+  --foreground: #f3f4f6;
+  --card: #1f1f1f;
+  --card-foreground: #f3f4f6;
+  --border: #2e2e2e;
+  --primary: #ec4899;
+  --primary-foreground: #ffffff;
+  --secondary: #2e2e2e;
+  --secondary-foreground: #f3f4f6;
+  --muted: #262626;
+  --muted-foreground: #a1a1aa;
+  --accent: #8b5cf6;
+  --accent-foreground: #ffffff;
+  --destructive: #7f1d1d;
+  --destructive-foreground: #f3f4f6;
+  --ring: #ec4899;
+  --radius: 1rem;
+}
+
+.pastel {
+  --background: #fff5f9;
+  --foreground: #0f0f0f;
+  --card: #ffffff;
+  --card-foreground: #0f0f0f;
+  --border: #ffd6ec;
+  --primary: #ec4899;
+  --primary-foreground: #ffffff;
+  --secondary: #f8e8ff;
+  --secondary-foreground: #1f2937;
+  --muted: #f5eaff;
+  --muted-foreground: #6b7280;
+  --accent: #8b5cf6;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --ring: #ec4899;
+  --radius: 1.5rem;
+}
+
+/* Apply theme variables */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.bg-card {
+  background-color: var(--card);
+  color: var(--card-foreground);
+}
+
+.border-color {
+  border-color: var(--border);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.bg-muted {
+  background-color: var(--muted);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+}
+
+.btn-secondary:hover {
+  opacity: 0.9;
+}
+
+.rounded-custom {
+  border-radius: var(--radius);
+}
